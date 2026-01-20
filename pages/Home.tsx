@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 import {
     ArrowRight,
     Shield,
@@ -55,11 +55,27 @@ const Home: React.FC = () => {
 
     return (
         <div className="flex flex-col font-sans">
-            <Helmet>
-                <title>UK Tax Calculator | Avoid the 60% Tax Trap | UKTaxGuide</title>
-                <meta name="description" content="Free UK tax calculators to optimize your take-home pay. Escape the 60% tax trap, calculate pension relief, and adjust net income. Privacy-first, no signup required." />
-                <meta name="keywords" content="UK tax calculator, 60% tax trap, adjusted net income, pension relief, salary sacrifice calculator" />
-            </Helmet>
+            <SEO
+                title="Free UK Tax Calculator & Refund Optimizer | Avoid 60% Trap"
+                description="Free UK tax calculators to optimize your take-home pay. Escape the 60% tax trap, calculate pension relief, and adjust net income. Privacy-first, no signup required."
+                keywords="UK tax calculator, 60% tax trap, adjusted net income, pension relief, salary sacrifice calculator, tax refund uk"
+                canonical="/"
+                type="website"
+                schema={{
+                    "@context": "https://schema.org",
+                    "@type": "WebApplication",
+                    "name": "UK Tax Guide",
+                    "url": "https://uktaxguide.com",
+                    "applicationCategory": "FinanceApplication",
+                    "operatingSystem": "Web Browser",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "GBP"
+                    },
+                    "featureList": "60% Tax Trap Calculator, Adjusted Net Income Calculator, Pension Relief Calculator"
+                }}
+            />
 
             {/* Hero */}
             <section className="relative bg-[#1a202c] text-white overflow-hidden">
@@ -77,7 +93,7 @@ const Home: React.FC = () => {
                             Updated for 2024/25 Tax Year
                         </div>
                         <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
-                            Master Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#667eea] to-[#a3bffa]">UK Tax Efficiency</span>
+                            Free <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#667eea] to-[#a3bffa]">UK Tax Calculator</span> & Refund Optimizer
                         </h1>
                         <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
                             Stop overpaying tax. Use our privacy-first calculators to optimize your take-home pay, escape the 60% tax trap, and maximize pension relief.

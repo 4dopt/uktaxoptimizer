@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async';
+import SEO from './components/SEO';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import CalculatorTemplate from './pages/CalculatorTemplate';
@@ -23,7 +24,11 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <BrowserRouter>
-        <Helmet titleTemplate="%s | UK Tax Guide" defaultTitle="UK Tax Guide | Free Tax Calculators" />
+        <SEO
+          title="UK Tax Guide | Free Tax Calculators"
+          description="Free UK tax calculators to optimize your income, pension contributions, and benefits for UK taxpayers."
+          canonical="/"
+        />
         <ScrollToTop />
         <Layout>
           <Routes>

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import { Calculator, ArrowRight, Shield, TrendingUp } from 'lucide-react';
 import { CALCULATORS } from '../constants';
 import CalculatorCard from '../components/CalculatorCard';
@@ -12,10 +12,11 @@ const Calculators: React.FC = () => {
 
     return (
         <div className="flex flex-col min-h-screen bg-gray-50 font-sans">
-            <Helmet>
-                <title>UK Tax Calculators | Income Tax, 60% Trap, Pension Relief | UKTaxGuide</title>
-                <meta name="description" content="Complete suite of free UK tax calculators. Optimize adjusted net income, calculate pension tax relief, and check your take-home pay. Privacy-first tax tools." />
-            </Helmet>
+            <SEO
+                title="Only UK Tax Calculators You Need | Free & Private"
+                description="Complete suite of free UK tax calculators. Optimize adjusted net income, calculate pension tax relief, and check your take-home pay. Privacy-first tax tools."
+                canonical="/calculators"
+            />
 
             {/* Hero Section */}
             <div className="bg-[#1a202c] text-white py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
