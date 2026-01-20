@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calculator, Lock } from 'lucide-react';
+import { Book, Lock } from 'lucide-react';
 
 interface ReportLayoutProps {
   title: string;
@@ -9,10 +9,10 @@ interface ReportLayoutProps {
 }
 
 const ReportLayout: React.FC<ReportLayoutProps> = ({ title, userName, date, children }) => {
-  const currentDate = date || new Date().toLocaleDateString('en-GB', { 
-    day: 'numeric', 
-    month: 'long', 
-    year: 'numeric' 
+  const currentDate = date || new Date().toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
   });
 
   return (
@@ -20,9 +20,9 @@ const ReportLayout: React.FC<ReportLayoutProps> = ({ title, userName, date, chil
       {/* Report Header */}
       <header className="border-b-2 border-gray-900 pb-8 mb-8 flex justify-between items-end">
         <div>
-          <div className="flex items-center gap-2 mb-4 text-[#667eea]">
-             <Calculator size={32} />
-             <span className="font-bold text-xl tracking-tight text-gray-900">UK Tax Optimizer</span>
+          <div className="flex items-center gap-2 mb-4 text-gray-900">
+            <Book size={32} />
+            <span className="font-bold text-xl tracking-tight text-gray-900">UKTaxGuide</span>
           </div>
           <h1 className="text-4xl font-black text-gray-900 mb-2">{title}</h1>
           <p className="text-gray-500 font-medium">Confidential Financial Analysis</p>
@@ -43,12 +43,12 @@ const ReportLayout: React.FC<ReportLayoutProps> = ({ title, userName, date, chil
       {/* Report Footer */}
       <footer className="mt-auto pt-8 border-t border-gray-200 flex justify-between items-center text-xs text-gray-400">
         <div>
-          <p>&copy; {new Date().getFullYear()} UK Tax Optimizer. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} UKTaxGuide. All rights reserved.</p>
           <p>Generated via uktaxoptimizer.co.uk</p>
         </div>
         <div className="max-w-md text-right">
-           <p className="mb-1 font-bold text-gray-500">Disclaimer</p>
-           <p>This report is for illustrative purposes only and does not constitute financial advice. Tax laws are subject to change. Please consult a qualified accountant.</p>
+          <p className="mb-1 font-bold text-gray-500">Disclaimer</p>
+          <p>This report is for illustrative purposes only and does not constitute financial advice. Tax laws are subject to change. Please consult a qualified accountant.</p>
         </div>
       </footer>
     </div>

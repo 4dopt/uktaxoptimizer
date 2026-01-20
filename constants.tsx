@@ -1,10 +1,11 @@
-import { 
-  AlertTriangle, 
-  Calculator, 
-  Baby, 
-  TrendingUp, 
-  ArrowLeftRight, 
-  PieChart 
+import {
+  AlertTriangle,
+  Calculator,
+  Baby,
+  TrendingUp,
+  ArrowLeftRight,
+  PieChart,
+  MapPin
 } from 'lucide-react';
 import { CalculatorConfig } from './types';
 
@@ -98,6 +99,21 @@ export const CALCULATORS: CalculatorConfig[] = [
     },
     tags: ['Investing', 'Tech'],
     theme: 'teal'
+  },
+  {
+    id: 'scottish-income-tax',
+    name: 'Scottish Income Tax',
+    description: "Calculate tax with Scotland's 6 unique tax bands",
+    path: '/scottish-income-tax-calculator',
+    icon: MapPin,
+    heroTitle: 'Scottish Income Tax Calculator',
+    heroSubtitle: 'Calculate your take-home pay under Scotland\'s unique 6-band tax system and compare with the rest of the UK.',
+    educationalContent: {
+      title: 'How Scottish Income Tax Works',
+      text: 'Scotland has 6 income tax bands compared to England, Wales, and Northern Ireland\'s 3 bands. Scottish taxpayers (those with an \'S\' tax code) pay different rates: 19% starter rate, 20% basic rate, 21% intermediate rate, 42% higher rate, 45% advanced rate, and 48% top rate. This creates a more progressive system where lower earners pay less and higher earners pay more.'
+    },
+    tags: ['Scotland', 'Income Tax', 'Regional'],
+    theme: 'blue'
   }
 ];
 

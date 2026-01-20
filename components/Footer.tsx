@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div className="col-span-1">
-            <h3 className="text-white text-lg font-bold mb-4">UK Tax Optimizer</h3>
+            <h3 className="text-white text-lg font-bold mb-4">UKTaxGuide</h3>
             <p className="text-sm leading-relaxed mb-4 text-gray-400">
               Helping UK taxpayers navigate the complexities of the tax system, optimize their income, and make informed financial decisions.
             </p>
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-          <p>&copy; {currentYear} UK Tax Optimizer. All rights reserved.</p>
+          <p>&copy; {currentYear} UKTaxGuide. All rights reserved.</p>
         </div>
       </div>
     </footer>

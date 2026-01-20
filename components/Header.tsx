@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Calculator } from 'lucide-react';
+import { Menu, X, Book } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +9,7 @@ const Header: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Calculators', path: '/#tools' }, // Anchor link logic handled by hash router naturally or manual scroll if needed
+    { name: 'Calculators', path: '/calculators' },
     { name: 'Blog', path: '/blog' },
     { name: 'About', path: '/contact' }, // Reuse contact as about/contact for now
   ];
@@ -20,11 +20,11 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="bg-[#667eea] p-1.5 rounded-lg text-white group-hover:bg-[#764ba2] transition-colors">
-              <Calculator size={24} />
+            <div className="bg-gray-900 p-1.5 rounded-lg text-white group-hover:bg-black transition-colors">
+              <Book size={24} />
             </div>
             <span className="font-bold text-xl text-gray-900 tracking-tight">
-              UK Tax Optimizer
+              UKTaxGuide
             </span>
           </Link>
 

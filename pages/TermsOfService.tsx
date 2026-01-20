@@ -10,7 +10,7 @@ const TermsOfService: React.FC = () => {
       </div>
 
       <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 md:p-12 space-y-8">
-        
+
         {/* Critical Disclaimer */}
         <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
           <div className="flex items-start gap-4">
@@ -20,8 +20,8 @@ const TermsOfService: React.FC = () => {
             <div>
               <h2 className="text-lg font-bold text-red-900 mb-2">Important Disclaimer: Not Financial Advice</h2>
               <p className="text-red-800 text-sm leading-relaxed">
-                The content and tools provided on UK Tax Optimizer are for <strong>information and educational purposes only</strong>. 
-                They do not constitute professional financial, legal, or tax advice. Tax laws are complex and subject to change. 
+                The content and tools provided on UKTaxGuide are for <strong>information and educational purposes only</strong>.
+                They do not constitute professional financial, legal, or tax advice. Tax laws are complex and subject to change.
                 You should always consult with a qualified accountant or independent financial advisor before making significant financial decisions.
               </p>
             </div>
@@ -31,7 +31,7 @@ const TermsOfService: React.FC = () => {
         <section className="space-y-4">
           <h2 className="text-2xl font-bold text-gray-900">1. Acceptance of Terms</h2>
           <p className="text-gray-700 leading-relaxed">
-            By accessing and using UK Tax Optimizer ("the Website"), you accept and agree to be bound by the terms and provision of this agreement. 
+            By accessing and using UKTaxGuide ("the Website"), you accept and agree to be bound by the terms and provision of this agreement.
             If you do not agree to abide by these terms, please do not use this Website.
           </p>
         </section>
@@ -51,7 +51,7 @@ const TermsOfService: React.FC = () => {
         <section className="space-y-4">
           <h2 className="text-2xl font-bold text-gray-900">3. Limitation of Liability</h2>
           <p className="text-gray-700 leading-relaxed">
-            In no event shall UK Tax Optimizer or its owners be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) 
+            In no event shall UKTaxGuide or its owners be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption)
             arising out of the use or inability to use the materials on the Website, even if we have been notified of the possibility of such damage.
           </p>
           <div className="bg-gray-50 p-4 rounded border border-gray-200 text-sm text-gray-600 mt-2">
@@ -62,7 +62,7 @@ const TermsOfService: React.FC = () => {
         <section className="space-y-4">
           <h2 className="text-2xl font-bold text-gray-900">4. Intellectual Property</h2>
           <p className="text-gray-700 leading-relaxed">
-            The code, design, and content of this Website are the intellectual property of UK Tax Optimizer and are protected by applicable copyright and trademark law. 
+            The code, design, and content of this Website are the intellectual property of UKTaxGuide and are protected by applicable copyright and trademark law.
             You may not reproduce, duplicate, copy, sell, resell or exploit any portion of the Service without express written permission by us.
           </p>
         </section>

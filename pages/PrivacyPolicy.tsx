@@ -10,7 +10,7 @@ const PrivacyPolicy: React.FC = () => {
       </div>
 
       <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 md:p-12 space-y-8">
-        
+
         {/* Key Privacy Highlight */}
         <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
           <div className="flex items-start gap-4">
@@ -20,7 +20,7 @@ const PrivacyPolicy: React.FC = () => {
             <div>
               <h2 className="text-lg font-bold text-green-900 mb-2">Your Data Stays on Your Device</h2>
               <p className="text-green-800 text-sm leading-relaxed">
-                UK Tax Optimizer is designed with a "Privacy First" architecture. All calculations are performed <strong>client-side</strong> within your web browser. 
+                UKTaxGuide is designed with a "Privacy First" architecture. All calculations are performed <strong>client-side</strong> within your web browser.
                 We do not send, store, or process your salary, pension, or tax data on our servers. When you close this tab, your data is gone.
               </p>
             </div>
