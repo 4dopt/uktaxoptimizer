@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center hover:border-[#667eea] transition-colors">
+        <a href="mailto:contact@uktaxguide.com?subject=Bug Report" className="block bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center hover:border-[#667eea] hover:shadow-md transition-all cursor-pointer">
           <div className="bg-indigo-50 w-12 h-12 rounded-full flex items-center justify-center text-[#667eea] mx-auto mb-4">
             <Bug size={24} />
           </div>
@@ -20,9 +20,9 @@ const Contact: React.FC = () => {
           <p className="text-sm text-gray-600">
             Calculations look off? Let us know the specifics so we can fix it.
           </p>
-        </div>
+        </a>
 
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center hover:border-[#667eea] transition-colors">
+        <a href="mailto:contact@uktaxguide.com?subject=New Tool Request" className="block bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center hover:border-[#667eea] hover:shadow-md transition-all cursor-pointer">
           <div className="bg-purple-50 w-12 h-12 rounded-full flex items-center justify-center text-[#764ba2] mx-auto mb-4">
             <Calculator size={24} />
           </div>
@@ -30,9 +30,9 @@ const Contact: React.FC = () => {
           <p className="text-sm text-gray-600">
             Need a calculator we don't have? Tell us what you need.
           </p>
-        </div>
+        </a>
 
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center hover:border-[#667eea] transition-colors">
+        <a href="mailto:contact@uktaxguide.com?subject=General Feedback" className="block bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center hover:border-[#667eea] hover:shadow-md transition-all cursor-pointer">
           <div className="bg-blue-50 w-12 h-12 rounded-full flex items-center justify-center text-[#00629B] mx-auto mb-4">
             <MessageSquare size={24} />
           </div>
@@ -40,23 +40,23 @@ const Contact: React.FC = () => {
           <p className="text-sm text-gray-600">
             Tell us how we can improve your experience on the site.
           </p>
-        </div>
+        </a>
       </div>
 
       <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 md:p-12 text-center">
         <Mail size={48} className="text-gray-300 mx-auto mb-6" />
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Get in touch via Email</h2>
         <p className="text-gray-600 mb-8 max-w-lg mx-auto">
-            We are a small team dedicated to building the best free tax tools for the UK. We read every email.
+          We are a small team dedicated to building the best free tax tools for the UK. We read every email.
         </p>
-        <a 
-            href="mailto:hello@uktaxoptimizer.co.uk" 
-            className="inline-flex items-center justify-center gap-2 bg-[#667eea] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#5a67d8] transition-colors shadow-sm"
+        <a
+          href="mailto:contact@uktaxguide.com"
+          className="inline-flex items-center justify-center gap-2 bg-[#667eea] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#5a67d8] transition-colors shadow-sm"
         >
-            <Mail size={20} /> hello@uktaxoptimizer.co.uk
+          <Mail size={20} /> contact@uktaxguide.com
         </a>
         <p className="text-xs text-gray-400 mt-6">
-            Response time: Usually within 24-48 hours.
+          Response time: Usually within 24-48 hours.
         </p>
       </div>
     </div>

@@ -44,7 +44,7 @@ const ReportLayout: React.FC<ReportLayoutProps> = ({ title, userName, date, chil
       <footer className="mt-auto pt-8 border-t border-gray-200 flex justify-between items-center text-xs text-gray-400">
         <div>
           <p>&copy; {new Date().getFullYear()} UKTaxGuide. All rights reserved.</p>
-          <p>Generated via uktaxoptimizer.co.uk</p>
+          <p>Generated via uktaxguide.com</p>
         </div>
         <div className="max-w-md text-right">
           <p className="mb-1 font-bold text-gray-500">Disclaimer</p>
