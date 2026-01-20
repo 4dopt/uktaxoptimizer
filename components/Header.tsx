@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Book } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <div className="bg-gray-900 p-1.5 rounded-lg text-white group-hover:bg-black transition-colors">
-              <Book size={24} />
+              <img src="/assets/logo-icon.png" alt="Logo" className="w-6 h-6 object-contain invert" />
             </div>
             <span className="font-bold text-xl text-gray-900 tracking-tight">
               UKTaxGuide

@@ -3,4 +3,4 @@ Allow: /
 
 Sitemap: https://uktaxguide.com/sitemap.xml
 
-Sitemap: https://uktax.gg/sitemap.xml
+

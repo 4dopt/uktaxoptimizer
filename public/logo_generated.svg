@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" width="200" height="48">
+  <!-- Styles -->
+  <style>
+    .icon-bg { fill: #111827; rx: 8px; }
+    .icon-path { fill: none; stroke: white; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .text { font-family: 'Inter', -apple-system, sans-serif; font-weight: bold; font-size: 20px; fill: #111827; letter-spacing: -0.025em; }
+  </style>
+
+  <!-- Logo Group -->
+  <g>
+    <!-- Icon Container -->
+    <rect x="0" y="4" width="40" height="40" class="icon-bg" />
+    
+    <!-- Lucide Book Icon (Centered in 40x40 box, scaled from 24x24) -->
+    <g transform="translate(8, 12)">
+      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" class="icon-path" />
+    </g>
+
+    <!-- Text -->
+    <text x="52" y="30" class="text">UKTaxGuide</text>
+  </g>
+</svg>
