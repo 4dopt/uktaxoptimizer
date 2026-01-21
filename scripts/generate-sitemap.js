@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL = 'https://uktax.gg'; // Replace with actual domain if known, or configure via env
+const BASE_URL = 'https://uktaxguide.com'; // Replace with actual domain if known, or configure via env
 
 const STATIC_ROUTES = [
     '/',
