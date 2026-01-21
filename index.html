@@ -8,17 +8,24 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
 
-    // Check for saved consent
-    const savedConsent = localStorage.getItem('cookieConsent');
-    const consentMode = savedConsent === 'granted' ? 'granted' : 'denied';
-
-    // Set default consent based on saved preference
+    // Set default consent to 'denied' strictly
     gtag('consent', 'default', {
-      'ad_storage': consentMode,
-      'ad_user_data': consentMode,
-      'ad_personalization': consentMode,
-      'analytics_storage': consentMode
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
     });
+
+    // Check for saved consent and update if previously granted
+    const savedConsent = localStorage.getItem('cookieConsent');
+    if (savedConsent === 'granted') {
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
+      });
+    }
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0BPDLGSXQG"></script>
   <script>
