@@ -35,7 +35,7 @@ const CookieConsent: React.FC = () => {
     if (!isVisible) return null;
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 md:right-4 md:left-auto md:max-w-md animate-slide-up">
+        <div className="fixed bottom-0 left-0 right-0 z-[9999] p-4 md:p-6 md:right-4 md:left-auto md:max-w-md animate-slide-up">
             <div className="bg-white rounded-xl shadow-2xl border border-gray-100 p-6 relative">
                 <button
                     onClick={() => handleUpdateConsent('denied')}
