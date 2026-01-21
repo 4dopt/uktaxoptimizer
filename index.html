@@ -8,13 +8,16 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
 
-    // Set default consent to 'denied' as a placeholder
-    // Determine actual values based on your own requirements
+    // Check for saved consent
+    const savedConsent = localStorage.getItem('cookieConsent');
+    const consentMode = savedConsent === 'granted' ? 'granted' : 'denied';
+
+    // Set default consent based on saved preference
     gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'analytics_storage': 'denied'
+      'ad_storage': consentMode,
+      'ad_user_data': consentMode,
+      'ad_personalization': consentMode,
+      'analytics_storage': consentMode
     });
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0BPDLGSXQG"></script>

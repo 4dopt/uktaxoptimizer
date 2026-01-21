@@ -15,14 +15,6 @@ const CookieConsent: React.FC = () => {
         const sensitivity = localStorage.getItem('cookieConsent');
         if (!sensitivity) {
             setIsVisible(true);
-        } else if (sensitivity === 'granted') {
-            // Restore granted state if page reloaded
-            window.gtag('consent', 'update', {
-                'ad_storage': 'granted',
-                'ad_user_data': 'granted',
-                'ad_personalization': 'granted',
-                'analytics_storage': 'granted'
-            });
         }
     }, []);
 
