@@ -11,6 +11,14 @@ const CookieConsent: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
+        // Check for reset flag in URL (useful for debugging)
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('reset_consent')) {
+            localStorage.removeItem('cookieConsent');
+            setIsVisible(true);
+            return;
+        }
+
         // Check if user has already made a choice
         const sensitivity = localStorage.getItem('cookieConsent');
         if (!sensitivity) {
