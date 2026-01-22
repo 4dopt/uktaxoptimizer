@@ -277,7 +277,7 @@ const ChildBenefitChargeGuide: React.FC = () => {
                     {/* Featured Image */}
                     <div className="w-full rounded-2xl mb-16 relative overflow-hidden shadow-2xl border border-gray-100">
                         <img
-                            src="/assets/images/child-benefit-hero.png"
+                            src="/assets/images/child-benefit-hero.webp"
                             alt="The £60k Family Tax Trap: Child Benefit Charge Threshold Visualization"
                             className="w-full h-auto object-cover"
                         />
@@ -422,7 +422,7 @@ const ChildBenefitChargeGuide: React.FC = () => {
                                 CHILD BENEFIT CHARGE SCALE
                             </h4>
                             <img
-                                src="/assets/images/child-benefit-charge-scale.png"
+                                src="/assets/images/child-benefit-charge-scale.webp"
                                 alt="Child Benefit Charge Sliding Scale from £60k to £80k"
                                 className="w-full h-auto object-cover rounded-lg"
                             />
@@ -530,7 +530,7 @@ const ChildBenefitChargeGuide: React.FC = () => {
                         {/* Decision Tree Visual */}
                         <div className="mb-12 shadow-xl rounded-xl overflow-hidden border border-gray-200">
                             <img
-                                src="/assets/images/child-benefit-decision-tree.png"
+                                src="/assets/images/child-benefit-decision-tree.webp"
                                 alt="Who Pays the High Income Child Benefit Charge Decision Tree"
                                 className="w-full h-auto object-cover"
                             />
@@ -927,7 +927,7 @@ const ChildBenefitChargeGuide: React.FC = () => {
                         {/* Critical Warning Box */}
                         <div className="mb-10 shadow-lg rounded-xl overflow-hidden">
                             <img
-                                src="/assets/images/ni-credits-trap-warning.png"
+                                src="/assets/images/ni-credits-trap-warning.webp"
                                 alt="WARNING: The NI Credits Trap - Missed Claim = Missed Pension Years"
                                 className="w-full h-auto object-cover"
                             />
@@ -985,7 +985,7 @@ const ChildBenefitChargeGuide: React.FC = () => {
 
                                     <div className="mb-6 rounded-xl overflow-hidden border border-emerald-100 shadow-md">
                                         <img
-                                            src="/assets/images/child-benefit-ni-credits.png"
+                                            src="/assets/images/child-benefit-ni-credits.webp"
                                             alt="Visualizing the value of NI Credits accumulating over time towards State Pension"
                                             className="w-full h-auto object-cover"
                                         />
@@ -1281,7 +1281,7 @@ const ChildBenefitChargeGuide: React.FC = () => {
                             {/* Comparison Visual */}
                             <div className="mb-10 shadow-lg rounded-xl overflow-hidden border border-gray-200">
                                 <img
-                                    src="/assets/images/child-benefit-comparison-chart.png"
+                                    src="/assets/images/child-benefit-comparison-chart.webp"
                                     alt="Comparison of State Pension impacts for Working vs Not Working Parents"
                                     className="w-full h-auto object-cover"
                                 />
@@ -1290,7 +1290,7 @@ const ChildBenefitChargeGuide: React.FC = () => {
                             {/* Detailed Opt Out Process */}
                             <div className="mb-12 shadow-lg rounded-xl overflow-hidden border border-gray-200">
                                 <img
-                                    src="/assets/images/how-to-opt-out-child-benefit.png"
+                                    src="/assets/images/how-to-opt-out-child-benefit.webp"
                                     alt="3-Step Process for Opting Out of Child Benefit Payments"
                                     className="w-full h-auto object-cover"
                                 />

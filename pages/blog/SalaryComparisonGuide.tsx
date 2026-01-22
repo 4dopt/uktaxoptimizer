@@ -82,7 +82,7 @@ const SalaryComparisonGuide: React.FC = () => {
 
                         <div className="mb-12 rounded-xl overflow-hidden shadow-2xl border border-gray-100">
                             <img
-                                src="/assets/images/salary-paradox.png"
+                                src="/assets/images/salary-paradox.webp"
                                 alt="UK Salary Paradox Tax Trap Visual"
                                 className="w-full h-auto object-cover"
                             />
@@ -176,7 +176,7 @@ const SalaryComparisonGuide: React.FC = () => {
 
                                     <div className="mt-6 mb-4 rounded-lg overflow-hidden border border-red-100 shadow-lg">
                                         <img
-                                            src="/assets/images/salary-comparison-chart.png"
+                                            src="/assets/images/salary-comparison-chart.webp"
                                             alt="Bar chart showing net pay drop from 99k to 101k"
                                             className="w-full h-auto object-cover"
                                         />
@@ -399,7 +399,7 @@ const SalaryComparisonGuide: React.FC = () => {
 
                             <div className="mb-6 rounded-lg overflow-hidden border border-gray-200 shadow-md">
                                 <img
-                                    src="/assets/images/tax-trap-zones.png"
+                                    src="/assets/images/tax-trap-zones.webp"
                                     alt="Visual map of the 60% tax trap zone between £100k and £125k"
                                     className="w-full h-auto object-cover"
                                 />
@@ -604,7 +604,7 @@ const SalaryComparisonGuide: React.FC = () => {
                                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Decision Framework: How to Navigate Salary Offers</h3>
                                 <div className="rounded-xl overflow-hidden shadow-xl border border-gray-200 mb-8">
                                     <img
-                                        src="/assets/images/salary-decision-tree.png"
+                                        src="/assets/images/salary-decision-tree.webp"
                                         alt="Decision tree flowchart for accepting or negotiating salary offers near £100k"
                                         className="w-full h-auto object-cover"
                                     />

@@ -276,7 +276,7 @@ const AdjustedNetIncomeGuide: React.FC = () => {
                     {/* Featured Image */}
                     <div className="w-full rounded-2xl mb-16 relative overflow-hidden shadow-2xl border border-gray-100">
                         <img
-                            src="/assets/images/ani-hero-calculation.png"
+                            src="/assets/images/ani-hero-calculation.webp"
                             alt="Adjusted Net Income Calculator - The Key to UK Benefits and Personal Allowance"
                             className="w-full h-auto object-cover"
                         />
@@ -395,7 +395,7 @@ const AdjustedNetIncomeGuide: React.FC = () => {
                         {/* Comparison Chart Visual */}
                         <div className="mb-8 shadow-lg rounded-xl overflow-hidden border border-gray-200">
                             <img
-                                src="/assets/images/ani-comparison-chart.png"
+                                src="/assets/images/ani-comparison-chart.webp"
                                 alt="Comparison: Gross Income vs Taxable Income vs Adjusted Net Income"
                                 className="w-full h-auto object-cover"
                             />
@@ -731,7 +731,7 @@ const AdjustedNetIncomeGuide: React.FC = () => {
                         {/* Step By Step Visual */}
                         <div className="mb-12 shadow-lg rounded-xl overflow-hidden border border-gray-200">
                             <img
-                                src="/assets/images/ani-calculator-step-by-step.png"
+                                src="/assets/images/ani-calculator-step-by-step.webp"
                                 alt="Step-by-Step Guide to Calculating Adjusted Net Income"
                                 className="w-full h-auto object-cover"
                             />
@@ -1387,7 +1387,7 @@ const AdjustedNetIncomeGuide: React.FC = () => {
                         {/* Strategies Infographic */}
                         <div className="mb-12 shadow-lg rounded-xl overflow-hidden border border-gray-200">
                             <img
-                                src="/assets/images/ani-reduction-infographic.png"
+                                src="/assets/images/ani-reduction-infographic.webp"
                                 alt="Strategies to Reduce Adjusted Net Income: Pension and Gift Aid"
                                 className="w-full h-auto object-cover"
                             />
@@ -1667,7 +1667,7 @@ const AdjustedNetIncomeGuide: React.FC = () => {
                                 {/* Flowchart Visual */}
                                 <div className="mb-8 rounded-xl overflow-hidden bg-white border border-gray-100 shadow-sm">
                                     <img
-                                        src="/assets/images/ani-reduction-flowchart.png"
+                                        src="/assets/images/ani-reduction-flowchart.webp"
                                         alt="Flowchart: Choosing the Best Way to Reduce Your ANI"
                                         className="w-full h-auto object-cover"
                                     />
