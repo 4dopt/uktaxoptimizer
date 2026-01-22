@@ -430,8 +430,8 @@ const ChildBenefitChargeGuide: React.FC = () => {
 
                         <h3 className="text-2xl font-bold text-[#1a202c] mt-12 mb-6">Child Benefit Rates 2026/27</h3>
 
-                        <div className="overflow-x-auto not-prose mb-8 shadow-sm rounded-xl border border-gray-100">
-                            <table className="w-full text-sm text-left">
+                        <div className="overflow-x-auto not-prose mb-8 shadow-sm rounded-xl border border-gray-100 max-w-[calc(100vw-2rem)] md:max-w-full">
+                            <table className="w-full text-sm text-left min-w-[500px]">
                                 <thead className="bg-gray-50 text-gray-700 font-bold uppercase text-xs">
                                     <tr>
                                         <th className="px-6 py-4">Child</th>

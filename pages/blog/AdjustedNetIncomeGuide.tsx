@@ -365,12 +365,12 @@ const AdjustedNetIncomeGuide: React.FC = () => {
                                 <Calculator className="text-blue-600" /> ANI Calculation Formula
                             </h4>
                             <div className="bg-white p-6 rounded-xl border border-blue-100 shadow-sm font-mono text-sm md:text-base text-gray-800 mb-6">
-                                <div className="font-bold mb-2">Adjusted Net Income (ANI) =</div>
+                                <div className="font-bold mb-2 break-words">Adjusted Net Income (ANI) =</div>
                                 <div className="pl-4 border-l-2 border-blue-200 space-y-2">
                                     <div>&nbsp;&nbsp;Total Income</div>
-                                    <div className="text-red-600">MINUS Pension Contributions (grossed up)</div>
-                                    <div className="text-red-600">MINUS Gift Aid Donations (grossed up)</div>
-                                    <div className="text-red-600">MINUS Trading Losses</div>
+                                    <div className="text-red-600 break-words">MINUS Pension Contributions (grossed up)</div>
+                                    <div className="text-red-600 break-words">MINUS Gift Aid Donations (grossed up)</div>
+                                    <div className="text-red-600 break-words">MINUS Trading Losses</div>
                                 </div>
                             </div>
 
@@ -402,8 +402,8 @@ const AdjustedNetIncomeGuide: React.FC = () => {
                         </div>
 
                         {/* Comparison Table */}
-                        <div className="overflow-x-auto not-prose mb-12 shadow-sm rounded-xl border border-gray-100">
-                            <table className="w-full text-sm text-left">
+                        <div className="overflow-x-auto not-prose mb-12 shadow-sm rounded-xl border border-gray-100 max-w-[calc(100vw-2rem)] md:max-w-full">
+                            <table className="w-full text-sm text-left min-w-[600px]">
                                 <thead className="bg-gray-50 text-gray-700 font-bold uppercase text-xs">
                                     <tr>
                                         <th className="px-6 py-4">Income Type</th>
@@ -669,8 +669,8 @@ const AdjustedNetIncomeGuide: React.FC = () => {
 
                         {/* Summary Reference Table */}
                         <h3 className="text-2xl font-bold text-[#1a202c] mb-6">Quick Reference Summary</h3>
-                        <div className="overflow-x-auto not-prose mb-8 shadow-sm rounded-xl border border-gray-100">
-                            <table className="w-full text-sm text-left">
+                        <div className="overflow-x-auto not-prose mb-8 shadow-sm rounded-xl border border-gray-100 max-w-[calc(100vw-2rem)] md:max-w-full">
+                            <table className="w-full text-sm text-left min-w-[600px]">
                                 <thead className="bg-gray-50 text-gray-700 font-bold uppercase text-xs">
                                     <tr>
                                         <th className="px-6 py-4">ANI Threshold</th>
