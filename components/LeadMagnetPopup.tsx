@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, FileText, Send, CheckCircle, Download } from 'lucide-react';
+import { X, CheckCircle, Download } from 'lucide-react';
 
 const LeadMagnetPopup: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -14,7 +14,7 @@ const LeadMagnetPopup: React.FC = () => {
         if (!hasSeen) {
             const timer = setTimeout(() => {
                 setIsVisible(true);
-            }, 10000); // 10 seconds (market standard typically 15-30, but 10 is good for testing/engagement)
+            }, 10000);
 
             return () => clearTimeout(timer);
         }
@@ -31,103 +31,121 @@ const LeadMagnetPopup: React.FC = () => {
         if (!email) return;
 
         setStatus('loading');
-
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1500));
-
         setStatus('success');
         localStorage.setItem('uktaxguide_lead_magnet_seen', 'true');
-
-        // Close after a brief delay so they see the success message
-        setTimeout(() => {
-            setIsVisible(false);
-        }, 3000);
+        setTimeout(() => setIsVisible(false), 3000);
     };
 
     if (!isVisible || isClosed) return null;
 
     return (
-        <div className="fixed bottom-4 right-4 z-50 md:bottom-8 md:right-8 max-w-sm w-full mx-auto p-1 animate-in slide-in-from-bottom-10 fade-in duration-700">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+            {/* Backdrop */}
+            <div
+                className="absolute inset-0 bg-gray-900/60 backdrop-blur-sm animate-in fade-in duration-500"
+                onClick={handleClose}
+            ></div>
 
-            {/* Glassmorphism/Premium Card Background */}
-            <div className="relative bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-indigo-100 overflow-hidden">
+            {/* Modal Card */}
+            <div className="relative w-full max-w-4xl bg-white rounded-xl shadow-2xl overflow-hidden animate-in zoom-in-95 fade-in duration-500 flex flex-col md:flex-row">
 
-                {/* Decorative Elements */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#667eea] to-[#764ba2]"></div>
-                <div className="absolute -top-10 -right-10 w-32 h-32 bg-indigo-50 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
-                <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-purple-50 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
-
-                {/* Close Button */}
+                {/* Close Button (Top Right) */}
                 <button
                     onClick={handleClose}
-                    className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 transition-colors p-1 rounded-full hover:bg-gray-100 z-10"
+                    className="absolute top-4 right-4 z-20 p-2 text-gray-400 hover:text-gray-600 bg-white/80 rounded-full transition-colors"
                 >
-                    <X size={18} />
+                    <X size={20} />
                 </button>
 
-                <div className="p-6 relative z-10">
-                    <div className="flex items-start gap-4 mb-4">
-                        <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 shadow-sm flex-shrink-0">
-                            <FileText size={24} />
-                        </div>
-                        <div>
-                            <h3 className="font-bold text-gray-900 text-lg leading-tight mb-1">
-                                Free 2025/26 Tax Guide
-                            </h3>
-                            <p className="text-sm text-gray-500 leading-snug">
-                                Don't overpay. Get the essential checklist before you file your return.
+                {/* Left Side: Book Mockup */}
+                <div className="w-full md:w-1/2 bg-[#064e3b] relative flex items-center justify-center p-8 md:p-12 overflow-hidden">
+                    {/* Background Elements */}
+                    <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
+
+                    <div className="relative z-10 transform hover:scale-105 transition-transform duration-700">
+                        {/* Book Shadow */}
+                        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-8 bg-black/40 blur-xl rounded-full"></div>
+                        <img
+                            src="/tax-guide-cover.png"
+                            alt="UK Tax Guide 2025/26"
+                            className="w-48 md:w-56 lg:w-64 h-auto drop-shadow-2xl relative z-10"
+                        />
+                    </div>
+                </div>
+
+                {/* Right Side: Content */}
+                <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                    <div className="space-y-6">
+                        <div className="space-y-2">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wide border border-emerald-100">
+                                Official 2025/26 Update
+                            </div>
+                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 leading-tight">
+                                Maximize Your Tax Refund
+                            </h2>
+                            <p className="text-gray-600 text-lg leading-relaxed">
+                                Our comprehensive guide covers every relief available to UK taxpayers. Simplify your filing today.
                             </p>
+                        </div>
+
+                        {status === 'success' ? (
+                            <div className="bg-emerald-50 rounded-xl p-6 text-center animate-in zoom-in duration-300">
+                                <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <CheckCircle size={32} />
+                                </div>
+                                <h4 className="text-xl font-bold text-emerald-900 mb-2">Check your inbox!</h4>
+                                <p className="text-emerald-800">
+                                    We've sent the guide to <strong>{email}</strong>
+                                </p>
+                            </div>
+                        ) : (
+                            <form onSubmit={handleSubmit} className="space-y-4">
+                                <div className="space-y-1">
+                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                                        Email Address
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        placeholder="Enter your email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        className="w-full px-4 py-3.5 rounded-lg border border-gray-300 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none transition-all text-base hover:bg-gray-50 bg-white shadow-sm"
+                                        required
+                                    />
+                                </div>
+                                <button
+                                    type="submit"
+                                    disabled={status === 'loading'}
+                                    className="w-full bg-[#064e3b] hover:bg-[#065f46] text-white font-serif font-bold py-4 px-6 rounded-lg transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed group text-lg"
+                                >
+                                    {status === 'loading' ? (
+                                        'Processing...'
+                                    ) : (
+                                        <>
+                                            Download Free PDF <Download size={20} className="group-hover:translate-x-1 transition-transform" />
+                                        </>
+                                    )}
+                                </button>
+
+                                <p className="text-center text-xs text-gray-400">
+                                    Secure & Confidential. Unsubscribe anytime.
+                                </p>
+                            </form>
+                        )}
+
+                        {/* Bottom Close Button */}
+                        <div className="flex justify-center pt-2">
+                            <button
+                                onClick={handleClose}
+                                className="text-gray-400 text-sm hover:text-gray-600 transition-colors uppercase font-bold tracking-wider"
+                            >
+                                No thanks, close window
+                            </button>
                         </div>
                     </div>
-
-                    {status === 'success' ? (
-                        <div className="bg-green-50 rounded-xl p-4 text-center animate-in zoom-in duration-300">
-                            <div className="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-2">
-                                <CheckCircle size={24} />
-                            </div>
-                            <h4 className="font-bold text-green-800">Check your inbox!</h4>
-                            <p className="text-xs text-green-700 mt-1">
-                                We've sent the guide to <strong>{email}</strong>
-                            </p>
-                        </div>
-                    ) : (
-                        <form onSubmit={handleSubmit} className="space-y-3">
-                            <div>
-                                <label htmlFor="email" className="sr-only">Email address</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    placeholder="Enter your email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all text-sm bg-gray-50/50 hover:bg-white"
-                                    required
-                                />
-                            </div>
-                            <button
-                                type="submit"
-                                disabled={status === 'loading'}
-                                className="w-full bg-[#667eea] hover:bg-[#5a67d8] text-white font-bold py-3 px-4 rounded-xl transition-all shadow-lg shadow-indigo-200 hover:shadow-indigo-300 hover:-translate-y-0.5 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
-                            >
-                                {status === 'loading' ? (
-                                    <>
-                                        <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                        </svg>
-                                        Sending...
-                                    </>
-                                ) : (
-                                    <>
-                                        Download Now <Download size={18} />
-                                    </>
-                                )}
-                            </button>
-                            <p className="text-[10px] text-gray-400 text-center">
-                                Join 10,000+ UK taxpayers optimizing their refunds.
-                            </p>
-                        </form>
-                    )}
                 </div>
             </div>
         </div>
