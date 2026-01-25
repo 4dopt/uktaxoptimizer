@@ -15,6 +15,7 @@ const AdjustedNetIncomeGuide = React.lazy(() => import('./pages/blog/AdjustedNet
 const ChildBenefitChargeGuide = React.lazy(() => import('./pages/blog/ChildBenefitChargeGuide'));
 const SalaryComparisonGuide = React.lazy(() => import('./pages/blog/SalaryComparisonGuide'));
 const SixtyKThresholdGuide = React.lazy(() => import('./pages/blog/SixtyKThresholdGuide'));
+const BasisPeriodReformGuide = React.lazy(() => import('./pages/blog/BasisPeriodReformGuide'));
 const ScottishTaxGuide = React.lazy(() => import('./pages/blog/ScottishTaxGuide'));
 const Calculators = React.lazy(() => import('./pages/Calculators'));
 
@@ -57,6 +58,7 @@ const App: React.FC = () => {
               <Route path="/blog/child-benefit-charge-calculator-guide" element={<ChildBenefitChargeGuide />} />
               <Route path="/blog/salary-comparison-calculator-guide" element={<SalaryComparisonGuide />} />
               <Route path="/blog/60k-tax-threshold-guide" element={<SixtyKThresholdGuide />} />
+              <Route path="/blog/basis-period-reform-guide" element={<BasisPeriodReformGuide />} />
               <Route path="/blog/scottish-tax-calculator-guide" element={<ScottishTaxGuide />} />
 
               {/* Generate routes for each calculator */}

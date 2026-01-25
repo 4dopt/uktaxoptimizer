@@ -10,6 +10,16 @@ const BlogIndex: React.FC = () => {
 
   const posts = [
     {
+      id: 'basis-period-reform-guide',
+      title: "Basis Period Reform: A Plain English Guide for Sole Traders",
+      excerpt: "The biggest change to self-employed tax in decades. Understand how the 2025 rules affect your tax bill, overlap relief, and transition profits.",
+      date: "January 25, 2026",
+      readTime: "10 min read",
+      category: "Business Tax",
+      path: "/blog/basis-period-reform-guide",
+      imageColor: "bg-indigo-600"
+    },
+    {
       id: 'scottish-tax-calculator-guide',
       title: "Scottish Income Tax Calculator: Complete Guide 2026/27",
       excerpt: "Everything you need to know about Scotland's 6 tax bands. Calculate your tax, compare with rest of UK, and understand what you'll actually pay.",
